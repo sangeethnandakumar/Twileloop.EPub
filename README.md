@@ -38,9 +38,9 @@
 
 ## Documentation
 * RTD is configured on repo to enable continues document patching & deployment
-* Full Documentation: [Click Here](https://twileloop.epub.readthedocs.io). 
+* Full Documentation: [Click Here](https://twileloopepub.readthedocs.io). 
 
-[![Documentation Status](https://readthedocs.org/projects/twileloop.epub/badge/?version=latest)](https://twileloop.epub.readthedocs.io)
+[![Documentation Status](https://readthedocs.org/projects/twileloopepub/badge/?version=latest)](https://twileloopepub.readthedocs.io)
 
 ## Support
 * Please open an `Issue` in case if you find any bugs
