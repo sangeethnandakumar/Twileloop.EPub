@@ -5,8 +5,8 @@
     <img src="https://cdn-icons-png.flaticon.com/512/3782/3782163.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h2 align="center"> Twileloop EBook Parser </h2>
-  <h4 align="center"> Twileloop.EPub </h4>
+  <h2 align="center"> Twileloop.EPub </h2>
+  <h4 align="center"> A Simple & Convenient EBook Parser </h4>
 
   <p align="center">
     <b> 
@@ -28,7 +28,7 @@
 * Reports are pushed to SonarCloud and is available publically
 * SonarCloud: [Click Here](https://sonarcloud.io/project/overview?id=sangeethnandakumar_Twileloop.EPub). 
 
-[![.NET](https://img.shields.io/github/actions/workflow/status/sangeethnandakumar/Twileloop.EPub/sonar.yml?branch=master&label=SonarQube%20%28Code%20Quality%29&style=flat-square)](https://sonarcloud.io/project/overview?id=sangeethnandakumar_Twileloop.EPub)
+[![.NET](https://img.shields.io/github/actions/workflow/status/sangeethnandakumar/Twileloop.EPub/sonar.yml?branch=master&label=SonarQube%20%28Code%20Quality%29&style=flat-square)](https://sonarcloud.io/summary/overall?id=sangeethnandakumar_Twileloop.EPub)
 
 ## Licensing
 * Fully free for personal/commertial projects without needing any commertial licenses.
