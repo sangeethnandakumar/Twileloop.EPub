@@ -1,18 +1,31 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	  <LangVersion>latest</LangVersion>
+    <LangVersion>latest</LangVersion>
+    <PackageId>Twileloop.EPub</PackageId>
+    <Title>Twileloop EBook Parser</Title>
+    <Version>1.0.0-alpha</Version>
+    <Authors>Sangeeth Nandakumar, Twileloop</Authors>
+    <Company>Twileloop</Company>
+    <Description>
+			EPUB Parser and Editor - Official Twileloop.EPub C# library for parsing and editing EPUB files.
+		</Description>
+    <PackageProjectUrl>https://twileloop.epub.readthedocs.io</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/sangeethnandakumar/Twileloop.EPub</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>library</PackageTags>
+    <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="DotNetZip" Version="1.16.0" />
+    <Folder Include="images\" />
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="Implementations\" />
   </ItemGroup>
-
+  <ItemGroup>
+    <None Include="images\logo.png" Pack="true" PackagePath="" />
+  </ItemGroup>
 </Project>
