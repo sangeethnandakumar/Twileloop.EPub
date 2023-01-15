@@ -1,24 +1,36 @@
 ﻿using Ionic.Zip;
 using System.Xml.Linq;
 using Twileloop.EPub.Abstractions;
-using Twileloop.EPub.Processor;
+using Twileloop.EPub.Implementations;
 using Twileloop.EPub.Utils;
 
-namespace Twileloop.EPub.Implementations
+namespace Twileloop.EPub
 {
     public class EBookFile : IEBookFile
     {
         internal EPubContext Context { get; set; } = new EPubContext();
 
         public IEPubInfo Information { get; set; }
-        public IEPubTOC TableOfContents { get; set; }
+        public IEPubToc TableOfContents { get; set; }
         public IEPubResources Resources { get; set; }
         public IEPubAssets Assets { get; set; }
         public IEPubUtils Utilities { get; set; }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            try
+            {
+                Directory.Delete(Context.ExtractedLocationRoot);
+            }
+            catch(Exception)
+            {
+
+            }
+        }
+
+        public EBookFile(string epubLocation, OpenMode openMode, EPubConfigOption configOption = null)
+        {
+            InternalLoad(epubLocation, openMode, configOption);
         }
 
         /// <summary>
@@ -29,9 +41,14 @@ namespace Twileloop.EPub.Implementations
         /// <param name="configOption"></param>
         public void Load(string epubLocation, OpenMode openMode, EPubConfigOption configOption = null)
         {
-            if(configOption is null)
+            InternalLoad(epubLocation, openMode, configOption);
+        }
+
+        private void InternalLoad(string epubLocation, OpenMode openMode, EPubConfigOption configOption = null)
+        {
+            if (configOption is null)
             {
-                configOption= new EPubConfigOption();
+                configOption = new EPubConfigOption();
             }
             //Get EPUB
             Context.EPubLocation = epubLocation;

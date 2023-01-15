@@ -4,7 +4,7 @@ using Twileloop.EPub.Utils;
 
 namespace Twileloop.EPub.Implementations
 {
-    public class EPubTOC : IEPubTOC
+    public class EPubTOC : IEPubToc
     {
         public EPubContext Context { get; set; }
         public EPubTOC(EPubContext context)

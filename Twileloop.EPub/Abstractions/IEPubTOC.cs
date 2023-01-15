@@ -2,7 +2,7 @@
 
 namespace Twileloop.EPub.Abstractions
 {
-    public interface IEPubTOC
+    public interface IEPubToc
     {
         //TOC
         public EBookTOC Result { get; }

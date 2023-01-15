@@ -1,4 +1,4 @@
-﻿namespace Twileloop.EPub.Entities
+﻿namespace Twileloop.EPub.Utils
 {
     public static class AssetMediaType
     {

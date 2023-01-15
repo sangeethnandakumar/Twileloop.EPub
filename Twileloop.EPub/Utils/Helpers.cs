@@ -2,9 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Twileloop.EPub.Utils;
 
-namespace Twileloop.EPub.Processor
+namespace Twileloop.EPub.Utils
 {
     internal static class Helpers
     {

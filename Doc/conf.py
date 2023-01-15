@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Twileloop EBook Parser (Twileloop.EPub)'
+project = 'Twileloop EBook (Twileloop.EPub)'
 copyright = '2023, Sangeeth Nandakumar (Twileloop)'
 author = 'Sangeeth Nandakumar, Twileloop'
 
