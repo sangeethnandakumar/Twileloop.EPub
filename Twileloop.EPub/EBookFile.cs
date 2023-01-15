@@ -16,21 +16,17 @@ namespace Twileloop.EPub
         public IEPubAssets Assets { get; set; }
         public IEPubUtils Utilities { get; set; }
 
+        /// <summary>
+        /// Delete the temp directory on dispose
+        /// </summary>
         public void Dispose()
         {
-            try
-            {
-                Directory.Delete(Context.ExtractedLocationRoot);
-            }
-            catch(Exception)
-            {
-
-            }
+            Directory.Delete(Context.ExtractedLocationRoot);
         }
 
-        public EBookFile(string epubLocation, OpenMode openMode, EPubConfigOption configOption = null)
+        public EBookFile(string epubLocation, EPubConfigOption configOption = null)
         {
-            InternalLoad(epubLocation, openMode, configOption);
+            InternalLoad(epubLocation, configOption);
         }
 
         /// <summary>
@@ -39,12 +35,12 @@ namespace Twileloop.EPub
         /// <param name="epubLocation"></param>
         /// <param name="openMode"></param>
         /// <param name="configOption"></param>
-        public void Load(string epubLocation, OpenMode openMode, EPubConfigOption configOption = null)
+        public void Load(string epubLocation, EPubConfigOption configOption = null)
         {
-            InternalLoad(epubLocation, openMode, configOption);
+            InternalLoad(epubLocation, configOption);
         }
 
-        private void InternalLoad(string epubLocation, OpenMode openMode, EPubConfigOption configOption = null)
+        private void InternalLoad(string epubLocation, EPubConfigOption configOption = null)
         {
             if (configOption is null)
             {

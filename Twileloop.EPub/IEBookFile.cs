@@ -6,7 +6,7 @@ namespace Twileloop.EPub
 
     public interface IEBookFile : IDisposable
     {
-        void Load(string epubLocation, OpenMode openMode, EPubConfigOption configOption = null);
+        void Load(string epubLocation, EPubConfigOption configOption = null);
         public IEPubInfo Information { get; }
         public IEPubToc TableOfContents { get; }
         public IEPubResources Resources { get; }
