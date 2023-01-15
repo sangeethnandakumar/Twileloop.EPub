@@ -219,11 +219,14 @@ private List<EBookGuide> GetEBookGuides()
             var root = Context.ContentDocument.Root;
             var ns = root.Name.Namespace;
             var manifestNode = Context.ContentDocument.Descendants(ns + "manifest").FirstOrDefault();
-            var item = new XElement(ns + "item",
+            if(manifestNode is not null)
+            {
+                var item = new XElement(ns + "item",
                         new XAttribute("href", href),
                         new XAttribute("id", id),
                         new XAttribute("media-type", mediaType));
-            manifestNode.Add(item);
+                manifestNode.Add(item);
+            }            
         }
 
         public void RemoveGuide(EBookGuide guide)
